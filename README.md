@@ -11,7 +11,7 @@ Sistema funcional para procesar, analizar y predecir series temporales utilizand
 
 ---
 
-## 🎯 Objetivos de Aprendizaje
+## 🎯 Objetivos
 
 - Implementar **lazy evaluation** para procesamiento eficiente de streams de datos
 - Aplicar **funciones de orden superior** en análisis temporal
