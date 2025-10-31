@@ -267,7 +267,7 @@ pytest tests/ -k "performance"
 
 ## 👥 Autor
 
-**Nombre**: [Tu Nombre]  
+**Nombre**: Abimael Villamar 
 **Email**: [tu-email@ucol.mx]  
 **GitHub**: [@tu-usuario](https://github.com/tu-usuario)
 
