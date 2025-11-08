@@ -2,7 +2,9 @@
 
 ## 📋 Descripción del Proyecto
 
-Sistema funcional para procesar, analizar y predecir series temporales utilizando técnicas de programación funcional, incluyendo transformaciones, filtrado de ruido, detección de tendencias y forecasting.
+Sistema que procesa y analiza la serie temporal de ventas del restaurante "Las Hamacas del Mayor" usando programación funcional. El sistema implementa transformaciones, filtrados y agregaciones (basado en el dataset M5 de Kaggle) manteniendo los principios de funciones puras e inmutabilidad.
+
+
 
 **Universidad de Colima - Ingeniería en Computación Inteligente**  
 **Materia**: Programación Funcional  
@@ -19,6 +21,11 @@ Sistema funcional para procesar, analizar y predecir series temporales utilizand
 - Practicar **composición de transformaciones** temporales
 - Utilizar **pattern matching** para detección de anomalías
 - Crear **funciones currying** para configuración de análisis
+- Implementar **funciones puras** para la transformación de series temporales.
+- Aplicar **lazy evaluation** (evaluación perezosa) con generadores para el manejo eficiente de grandes datasets (M5).
+- Usar **composición de funciones** para construir pipelines de análisis.
+- Aplicar **funciones de orden superior** (map, filter, reduce) en el análisis temporal.
+- Desarrollar un módulo de **detección de anomalías** para identificar días con ventas inusuales (Próxima semana).
 
 ---
 
@@ -40,12 +47,14 @@ Sistema funcional para procesar, analizar y predecir series temporales utilizand
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/tu-usuario/series-temporales-funcional.git
-cd series-temporales-funcional
+git clone
+[https://github.com/sebastiangz/Procesador_de_Series_Temporales_con_Enfoque_Funcional.git](https://github.com/sebastiangz/Procesador_de_Series_Temporales_con_Enfoque_Funcional.git)
+cd Procesador_de_Series_Temporales_con_Enfoque_Funcional
 
 # Crear entorno virtual
 python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
+# En Windows (PowerShell):
+.\venv\Scripts\Activate.ps1
 
 # Instalar dependencias
 pip install -r requirements.txt
@@ -64,61 +73,59 @@ scipy>=1.11.0
 
 ---
 
-## 🚀 Uso del Sistema
+## 🚀 Uso del Sistema (Avance 2)
 
-```python
-from src.timeseries import load_series, create_pipeline
+```El siguiente script (demo_avance2.py) demuestra el uso de los generadores y el pipeline de transformaciones (Semana 1 y 2).
 
-# Cargar serie temporal
-data = load_series('datos/ventas.csv', date_column='fecha')
+Python
 
-# Crear pipeline funcional
-pipeline = create_pipeline(
-    remove_outliers(threshold=3),
-    smooth_ma(window=7),
-    detect_trend(),
-    seasonal_decompose(),
-    forecast(periods=30)
-)
+# demo_avance2.py
 
-# Procesar serie
-result = pipeline(data)
+from src.core.lazy_streams import leer_ventas_csv
+from src.core.pure_functions import media_movil, normalizar
+from src.core.transformers import TimeSeriesPipeline
+from functools import partial
 
-# Visualizar
-plot_results(result, output='analisis.html')
+# 1. Cargar datos de forma 'lazy' (eficiente)
+# (Usamos un archivo de ejemplo para la demo)
+generador_ventas = leer_ventas_csv('data/ventas_restaurante.csv')
+        
+# 2. Extraer solo la columna de interés
+serie_temporal = [venta['total_ventas'] for venta in generador_ventas]
+
+# 3. Crear un pipeline funcional de transformaciones
+# (Esto combina Semana 1 y Semana 2)
+pipeline = (TimeSeriesPipeline(serie_temporal)
+           .add_transformation(normalizar, method='zscore') # Transf. Semana 2
+           .add_transformation(lambda data_tupla: data_tupla[0]) # Se extrae el dato
+           .add_transformation(media_movil, tamano_ventana=3) # Operación Semana 1
+           )
+        
+# 4. Ejecutar el pipeline
+resultado_final = pipeline.execute()
+
+print(f"Datos procesados (Normalizados + Media Móvil): {resultado_final}")
 ```
 
 ---
 
-## 📂 Estructura del Proyecto
+## 📂 Estructura del Proyecto (Avance 2)
 
 ```
-series-temporales-funcional/
-├── src/
-│   ├── __init__.py
-│   ├── timeseries.py       # Funciones core de series temporales
-│   ├── transforms.py       # Transformaciones funcionales
-│   ├── filters.py          # Filtros y suavizado
-│   ├── analysis.py         # Análisis estadístico
-│   ├── forecasting.py      # Modelos de predicción
-│   └── visualization.py    # Gráficos y visualización
+Esta es la estructura de archivos implementada hasta la Semana 2.
+
+/timeseries_processor/
 ├── data/
-│   ├── raw/                # Datos crudos
-│   └── processed/          # Datos procesados
-├── tests/
-│   ├── test_transforms.py
-│   ├── test_filters.py
-│   └── test_forecasting.py
-├── notebooks/
-│   ├── exploracion.ipynb
-│   └── ejemplos.ipynb
-├── docs/
-│   ├── api.md
-│   └── ejemplos.md
-├── requirements.txt
-├── README.md
-└── .gitignore
-```
+│   └── ventas_restaurante.csv   # Archivo con el historial de ventas
+├── src/
+│   └── core/
+│       ├── _init_.py          # Inicializador del paquete
+│       ├── pure_functions.py    # (Avance 1 y 2: media_movil, normalize)
+│       ├── transformers.py      # (Avance 2: compose, pipe, TimeSeriesPipeline)
+│       └── lazy_streams.py      # (Avance 1: leer_ventas_csv)
+├── venv/
+├── demo_avance1.py              # Script demo de la Semana 1
+└── requirements.txt
 
 ---
 
@@ -216,17 +223,23 @@ pytest tests/ -k "performance"
 
 ## 📈 Pipeline de Desarrollo
 
-### Semana 1: Fundamentos (30 Oct - 5 Nov)
+### Semana 1: Funciones Básicas de Manipulación (Completado)
 - Estructuras de datos inmutables para series
 - Funciones básicas de transformación
 - Lazy evaluation inicial
+- Estructura del proyecto y lectura de datos (lazy_streams.py).
 
-### Semana 2: Análisis Avanzado (6 Nov - 12 Nov)
+Operaciones básicas: media_movil, diferenciacion (pure_functions.py).
+
+### Semana 2: Filtros y Transformaciones Complejas (Completado) 
 - Descomposición estacional funcional
 - Detección de anomalías
 - Métricas de calidad
+- Implementación de transformaciones de escala (normalize en pure_functions.py).
 
-### Semana 3: Forecasting (13 Nov - 19 Nov)
+Implementación de composición de funciones (pipe, TimeSeriesPipeline en transformers.py).
+
+### Semana 3: Detección de Anomalías y Patrones (En progreso)
 - Modelos predictivos funcionales
 - Validación temporal
 - Dashboard interactivo
@@ -235,13 +248,17 @@ pytest tests/ -k "performance"
 
 ## 💼 Componente de Emprendimiento
 
-**Aplicación Real**: Sistema de análisis y predicción de ventas para e-commerce
+**Aplicación Real**: Sistema de análisis y predicción de ventas para el restaurante "Las Hamacas del Mayor".
 
 **Propuesta de Valor**:
 - Predicción de demanda con 90%+ de precisión
 - Detección automática de tendencias de mercado
 - Alertas tempranas de anomalías en ventas
 - Optimización de inventario basada en forecasting
+- Optimización de inventario para reducir el desperdicio de alimentos.
+- Detección automática de anomalías en las ventas (ej. caídas por problemas operativos).
+- Planificación de personal basada en la predicción de demanda por día de la semana.
+
 
 **Modelo de Negocio**: SaaS con pricing por volumen de datos procesados
 
@@ -253,6 +270,12 @@ pytest tests/ -k "performance"
 - **Pandas Time Series**: https://pandas.pydata.org/docs/user_guide/timeseries.html
 - **Statsmodels**: https://www.statsmodels.org/
 - **Toolz**: https://toolz.readthedocs.io/
+- Sprangers, O., De Rijke, M., & Vlachos, M. (2024). Efficient and Accurate Forecasting in Large-scale Settings.
+- Relevancia: Justifica el uso de agregaciones para analizar ventas en diferentes niveles y encontrar tendencias.
+- Ledesma, J., Garcia, M. (2025). Real-Time Advertising Data Unification Using Spark and S3.
+- Relevancia: Respalda el uso de un pipeline funcional para transformar y filtrar grandes volúmenes de datos, similar a cómo procesaremos el historial de ventas.
+- Wagner, M. & Neumann, D. (2020). Identifying and Responding to Outlier Demand in Revenue Management.
+- Relevancia: Fundamenta el objetivo de nuestra Semana 3 para la detección de anomalías, aplicando técnicas funcionales para identificar días con ventas inusuales.
 
 ---
 
@@ -269,8 +292,9 @@ pytest tests/ -k "performance"
 
 **Nombre**: Abimael Villamar 
 **Nombre**: Jesus Fuentes
-**Email**: [tu-email@ucol.mx]  
-**GitHub**: [@tu-usuario](https://github.com/tu-usuario)
+**Nombre**: Aaron Diaz
+**Email**: [adiaz82@ucol.mx]  
+**GitHub**: [@aarondiazurena25](https://github.com/tu-usuario)
 
 ---
 
