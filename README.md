@@ -268,7 +268,7 @@ pytest tests/ -k "performance"
 ## 👥 Autor
 
 **Nombre**: Abimael Villamar 
-**Nombre**:Jesus Fuentes
+**Nombre**: Jesus Fuentes
 **Email**: [tu-email@ucol.mx]  
 **GitHub**: [@tu-usuario](https://github.com/tu-usuario)
 
