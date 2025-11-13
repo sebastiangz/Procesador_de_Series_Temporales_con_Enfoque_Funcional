@@ -273,6 +273,10 @@ pytest tests/ -k "performance"
 **Nombre**: Jesus Fuentes
 **Email**: [Jfuentes15@ucol.mx](mailto:jfuentes15@ucol.mx)
 **GitHub**: [@ChuyFuentes](https://github.com/ChuyFuentesDev)
+aarondiazurena25-svg
+**Nombre**: Aaron Diaz
+**Email**: [adiaz82@ucol.mx](mailto:adiaz82@ucol.mx)
+**GitHub**: [@aarondiazurena25-svg](https://github.com/aarondiazurena25-svgDev)
 ---
 
 ## 📄 Licencia
