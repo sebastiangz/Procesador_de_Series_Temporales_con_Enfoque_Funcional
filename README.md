@@ -272,7 +272,7 @@ pytest tests/ -k "performance"
 **GitHub**: [@tu-usuario](https://github.com/tu-usuario)
 **Nombre**: Jesus Fuentes
 **Email**: [tu-email@ucol.mx](mailto:jfuentes15@ucol.mx)
-**GitHub**: [@tu-usuario](https://github.com/JesusFuentesDev)
+**GitHub**: [@tu-usuario](https://github.com/ChuyFuentesDev)
 ---
 
 ## 📄 Licencia
