@@ -143,136 +143,19 @@ Propuesta de Valor:
 
 👥 EQUIPO
 ----------
-- Nombre: Abimael Villamar
-  GitHub: @Abimael2012 (https://github.com/Abimael2012)
-- Nombre: Jesus Fuentes
-- Nombre: Aaron Diaz
+1. Nombre: Abimael Villamar
+   Email:  agarcia165@ucol.mx
+   GitHub: @Abimael2012 (https://github.com/Abimael2012)
 
-<<<<<<< HEAD
-def detect_pattern(pattern, threshold=0.9):
-    """Detecta patrones en series temporales"""
-    def matcher(series):
-        windows = sliding_window(len(pattern), series)
-        return [
-            (i, correlation(window, pattern))
-            for i, window in enumerate(windows)
-            if correlation(window, pattern) >= threshold
-        ]
-    return matcher
-```
+2. Nombre: Jesus Fuentes
+   Email:  Jfuentes15@ucol.mx
+   GitHub: @ChuyFuentes (https://github.com/ChuyFuentesDev)
 
----
+3. Nombre: Aaron Diaz
+   Email:  adiaz82@ucol.mx
+   GitHub: @aarondiazurena25-svg (https://github.com/aarondiazurena25-svgDev)
 
-## 📊 Funcionalidades Implementadas
-
-### Procesamiento de Datos
-- ✅ Carga desde múltiples formatos (CSV, JSON, Parquet)
-- ✅ Resampling temporal (upsampling/downsampling)
-- ✅ Interpolación de valores faltantes
-- ✅ Normalización y estandarización
-
-### Análisis
-- ✅ Descomposición estacional (STL, X-13)
-- ✅ Detección de tendencias
-- ✅ Identificación de anomalías
-- ✅ Análisis de autocorrelación
-
-### Forecasting
-- ✅ Moving Average
-- ✅ Exponential Smoothing
-- ✅ ARIMA funcional
-- ✅ Validación cruzada temporal
-
-### Visualización
-- ✅ Gráficos interactivos
-- ✅ Dashboard de análisis
-- ✅ Exportación de reportes
-
----
-
-## 🧪 Testing
-
-```bash
-# Ejecutar tests
-pytest tests/ -v
-
-# Tests con cobertura
-pytest --cov=src tests/
-
-# Tests de performance
-pytest tests/ -k "performance"
-```
-
----
-
-## 📈 Pipeline de Desarrollo
-
-### Semana 1: Fundamentos (30 Oct - 5 Nov)
-- Estructuras de datos inmutables para series
-- Funciones básicas de transformación
-- Lazy evaluation inicial
-
-### Semana 2: Análisis Avanzado (6 Nov - 12 Nov)
-- Descomposición estacional funcional
-- Detección de anomalías
-- Métricas de calidad
-
-### Semana 3: Forecasting (13 Nov - 19 Nov)
-- Modelos predictivos funcionales
-- Validación temporal
-- Dashboard interactivo
-
----
-
-## 💼 Componente de Emprendimiento
-
-**Aplicación Real**: Sistema de análisis y predicción de ventas para e-commerce
-
-**Propuesta de Valor**:
-- Predicción de demanda con 90%+ de precisión
-- Detección automática de tendencias de mercado
-- Alertas tempranas de anomalías en ventas
-- Optimización de inventario basada en forecasting
-
-**Modelo de Negocio**: SaaS con pricing por volumen de datos procesados
-
----
-
-## 📚 Referencias
-
-- Hyndman, R.J., & Athanasopoulos, G. (2021). *Forecasting: principles and practice*
-- **Pandas Time Series**: https://pandas.pydata.org/docs/user_guide/timeseries.html
-- **Statsmodels**: https://www.statsmodels.org/
-- **Toolz**: https://toolz.readthedocs.io/
-
----
-
-## 🏆 Criterios de Evaluación
-
-- **Lazy Evaluation (25%)**: Eficiencia en memoria, procesamiento bajo demanda
-- **Composición Funcional (30%)**: Pipeline elegante, transformaciones composables
-- **Análisis Temporal (25%)**: Precisión en forecasting, detección de patrones
-- **Testing y Performance (20%)**: Cobertura, benchmarks
-
----
-
-## 👥 Autor
-
-**Nombre**: Abimael Villamar 
-**Email**: [tu-email@ucol.mx]  
-**GitHub**: [@tu-usuario](https://github.com/tu-usuario)
-**Nombre**: Jesus Fuentes
-**Email**: [Jfuentes15@ucol.mx](mailto:jfuentes15@ucol.mx)
-**GitHub**: [@ChuyFuentes](https://github.com/ChuyFuentesDev)
-**Nombre**: Aaron Diaz
-**Email**: [adiaz82@ucol.mx](mailto:adiaz82@ucol.mx)
-**GitHub**: [@aarondiazurena25-svg](https://github.com/aarondiazurena25-svgDev)
----
-
-## 📄 Licencia
-=======
 ==================================================================
->>>>>>> d681c978d0e169f7fa9fb6547fa0d9c561ef44f9
 
 📄 LICENCIA
 ------------
