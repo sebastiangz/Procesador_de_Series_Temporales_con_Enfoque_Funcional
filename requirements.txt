@@ -1,0 +1,11 @@
+pandas==2.2.0
+numpy==1.26.0
+statsmodels==0.14.1
+matplotlib==3.8.2
+seaborn==0.13.1
+scipy==1.12.0
+rx 
+aioreactive==0.20.0
+fastapi==0.109.0
+uvicorn==0.27.0
+plotly==5.18.0
