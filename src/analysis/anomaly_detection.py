@@ -3,9 +3,11 @@
 # Contiene la lógica para la detección de anomalías (Semana 3).
 # ==============================================================================
 
+
 from typing import List, Tuple, Callable
 # Numpy se usa para cálculos estadísticos como la media, mediana y desviación estándar.
 import numpy as np
+
 
 def z_score_anomalies(data: List[float], threshold: float = 3.0) -> List[Tuple[int, float]]:
     """
@@ -93,6 +95,7 @@ def ensemble_anomaly_detection(data: List[float], detectors: List[Callable], vot
         (idx, data[idx])
         for idx, count in anomaly_counts.items()
         if count >= threshold
+        
     ]
      
     return sorted(final_anomalies, key=lambda x: x[0])
