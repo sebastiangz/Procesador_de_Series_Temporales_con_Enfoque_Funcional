@@ -44,6 +44,7 @@ Semestre: Agosto 2025 - Enero 2026
 ---------------
 # 1. Clonar el repositorio
 git clone https://github.com/sebastiangz/Procesador_de_Series_Temporales_con_Enfoque_Funcional.git
+
 cd Procesador_de_Series_Temporales_con_Enfoque_Funcional
 
 # 2. Crear y activar el entorno virtual
