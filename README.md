@@ -148,9 +148,9 @@ Propuesta de Valor:
    Email:  cnaranjo4@ucol.mx
    GitHub: @criss-cmd594 
 
-2. Nombre: Jesus Fuentes
-   Email:  Jfuentes15@ucol.mx
-   GitHub: @ChuyFuentes (https://github.com/ChuyFuentesDev)
+2. Nombre: Francisco Villaseñor
+   Email:  fvillasenor4@ucol.mx
+   GitHub: @fvillasenor4 (https://github.com/fvillasenor4)
 
 3. Nombre:  Dustin Feliciano
    Email:  dfeliciano@ucol.mx
