@@ -144,9 +144,9 @@ Propuesta de Valor:
 
 👥 EQUIPO
 ----------
-1. Nombre: Abimael Villamar
-   Email:  agarcia165@ucol.mx
-   GitHub: @Abimael2012 (https://github.com/Abimael2012)
+1. Nombre: Cristian Naranjo
+   Email:  cnaranjo4@ucol.mx
+   GitHub: @criss-cmd594 
 
 2. Nombre: Jesus Fuentes
    Email:  Jfuentes15@ucol.mx
