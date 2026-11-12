@@ -152,12 +152,12 @@ Propuesta de Valor:
    Email:  Jfuentes15@ucol.mx
    GitHub: @ChuyFuentes (https://github.com/ChuyFuentesDev)
 
-3. Nombre: Aaron Diaz
-   Email:  adiaz82@ucol.mx
-   GitHub: @aarondiazurena25-svg (https://github.com/aarondiazurena25-svgDev)
+3. Nombre:  Dustin Feliciano
+   Email:  dfeliciano@ucol.mx
+   GitHub: @dfeliciano-eng
 
 ==================================================================
 
 📄 LICENCIA
 ------------
-Proyecto académico - Universidad de Colima © 2025
+Proyecto académico - Universidad de Colima © 2026
