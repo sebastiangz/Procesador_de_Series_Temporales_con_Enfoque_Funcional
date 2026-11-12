@@ -2,16 +2,18 @@
 ==================================================================
 
 📋 DESCRIPCIÓN DEL PROYECTO
-----------------------------
-Sistema funcional que procesa y analiza la serie temporal de ventas del restaurante "Las Hamacas del Mayor".
-El sistema implementa transformaciones, filtrados y agregaciones (basado en el dataset M5 de Kaggle)
-manteniendo los principios de funciones puras e inmutabilidad.
 
-Universidad de Colima - Ingeniería en Computación Inteligente
+Sistema de procesamiento y análisis de series temporales desarrollado en Python, enfocado en el estudio de las ventas de café registradas mediante una máquina expendedora. El proyecto utiliza como fuente de información el Coffee Sales Dataset de Kaggle, que contiene registros de ventas desde marzo de 2024, incluyendo fecha, hora, tipo de café, método de pago e importe de cada transacción.
+
+El sistema tiene como objetivo identificar patrones de consumo, analizar tendencias de ventas, calcular estadísticas y detectar comportamientos anómalos a lo largo del tiempo.
+
+Para ello, se implementarán transformaciones, filtrados y agregaciones mediante los principios de la programación funcional, utilizando funciones puras, inmutabilidad, evaluación perezosa y composición de funciones.
+
+Universidad de Colima
+Carrera: Ingeniería en Computación Inteligente
 Materia: Programación Funcional
-Profesor: Gonzalez Zepeda Sebastian
-Semestre: Agosto 2025 - Enero 2026
-
+Profesor: González Zepeda Sebastián
+Semestre: Agosto 2026 - Enero 2027
 ==================================================================
 
 🎯 OBJETIVOS
