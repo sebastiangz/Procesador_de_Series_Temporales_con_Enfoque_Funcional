@@ -66,7 +66,7 @@ Módulo asignado: transformaciones.py
 
 Responsabilidad: Implementación de funciones puras, filtros y cálculos para el análisis de ventas.
 
-Estado: Pendiente.
+Estado: En desarrollo.
 
 3. Francisco Javiel Villaseñor Cernas
 
@@ -76,7 +76,7 @@ Módulo asignado: main.py y pruebas.
 
 Responsabilidad: Desarrollo del menú principal, integración de los módulos y realización de pruebas básicas.
 
-Estado: Pendiente.
+Estado: En desarrollo.
 
 Organización del trabajo
 
