@@ -216,12 +216,16 @@ Para continuar con el desarrollo se tiene previsto:
 
 Estas mejoras se implementarán manteniendo el código sencillo y respetando los principios de programación funcional.
 
-## 📚 FUENTE DE DATOS
+📚 FUENTE DE DATOS
 
-**Coffee Sales Dataset — Kaggle**
+Nombre: Coffee Sales Dataset
 
-Autor: Yaroslav Isaienkov (`ihelon`).
+Autor del notebook: Mahmoud Gamil
 
-Enlace: https://www.kaggle.com/datasets/ihelon/coffee-sales
+Plataforma: Kaggle
 
-El conjunto de datos contiene información sobre transacciones de venta de café utilizada con fines académicos para probar el funcionamiento del sistema.
+Archivo utilizado: Coffe_sales.csv
+
+Enlace: https://www.kaggle.com/code/mahmoudredagamail/coffee-sales-dataset/input
+
+El conjunto de datos contiene información sobre transacciones de ventas de café y fue utilizado con fines académicos y educativos, para desarrollar, probar y comprobar el funcionamiento del sistema mediante los principios de la programación funcional.
