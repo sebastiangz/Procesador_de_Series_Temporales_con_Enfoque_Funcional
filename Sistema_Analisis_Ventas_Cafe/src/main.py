@@ -1,4 +1,5 @@
 import os
+from datetime import datetime
 from datos import leer_ventas
 from transformaciones import (
     filtrar_por_fecha,
@@ -45,6 +46,17 @@ def mostrar_resumen(ventas):
 
 def consultar_fecha(ventas):
     fecha = input("Ingresa la fecha (AAAA-MM-DD): ")
+
+    try:
+        fecha_validada = datetime.strptime(fecha, "%Y-%m-%d")
+
+        if fecha_validada.strftime("%Y-%m-%d") != fecha:
+            print("Formato de fecha no valido.")
+            return
+
+    except ValueError:
+        print("Fecha no valida. Usa el formato AAAA-MM-DD.")
+        return
 
     ventas_fecha = filtrar_por_fecha(ventas, fecha)
 
