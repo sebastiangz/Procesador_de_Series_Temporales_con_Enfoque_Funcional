@@ -10,7 +10,7 @@ El sistema permite procesar estos datos para realizar consultas sobre las ventas
 
 Se implementan conceptos de programación funcional como funciones puras, estructuras de datos inmutables y funciones de orden superior (`map`, `filter` y `reduce`).
 
-El proyecto se desarrolla de forma modular, permitiendo que cada integrante del equipo trabaje en una parte específica del sistema.
+El proyecto se desarrolló de forma modular, permitiendo que cada integrante del equipo trabajara en una parte específica del sistema.
 
 ## 🎯 OBJETIVOS
 
@@ -60,28 +60,26 @@ Desarrollar un sistema en Python que permita procesar y analizar registros de ve
 - GitHub: [@fvillasenor4](https://github.com/fvillasenor4)
 - Módulo asignado: `main.py` y pruebas.
 - Responsabilidad: Desarrollo del menú principal, integración de los módulos y realización de pruebas básicas.
-- Estado: Implementado y probado localmente.
+- Estado: Implementado y probado.
 
 ### Organización del trabajo
 
-Cada integrante es responsable de desarrollar y documentar su módulo, colaborando con los demás integrantes para lograr el funcionamiento completo del sistema.
+Cada integrante fue responsable de desarrollar y documentar su módulo, colaborando con los demás integrantes para lograr el funcionamiento completo del sistema.
 
 ## 📌 ESTADO ACTUAL DEL PROYECTO
 
-Se ha desarrollado una primera versión funcional del sistema, integrando los módulos de lectura de datos, transformaciones y menú principal.
+Se desarrolló un sistema funcional que integra los módulos de lectura de datos, transformaciones y menú principal.
 
 Los tres módulos fueron probados en Visual Studio Code, comprobando que el programa puede leer y analizar los 3,547 registros del archivo CSV.
 
-Actualmente se cuenta con:
+El sistema cuenta con:
 
 - Lectura y organización de los registros de ventas.
 - Funciones de filtrado por fecha y hora.
 - Cálculo de ingresos y conteo de productos vendidos.
 - Menú interactivo en la terminal.
 - Validación de entradas del usuario.
-- Pruebas básicas de las funciones de análisis.
-
-El proyecto continuará mejorándose de acuerdo con las recomendaciones del profesor.
+- Pruebas de las funciones de análisis.
 
 ## 💻 FUNCIONALIDADES DEL SISTEMA
 
@@ -125,8 +123,11 @@ Sistema_Analisis_Ventas_Cafe/
 │   ├── transformaciones.py
 │   └── main.py
 │
-└── tests/
-    └── test_transformaciones.py
+├── tests/
+│   └── test_transformaciones.py
+│
+└── docs/
+    └── EMPRENDIMIENTO.md
 ```
 
 **Descripción de los archivos principales:**
@@ -136,10 +137,11 @@ Sistema_Analisis_Ventas_Cafe/
 - `main.py`: menú principal e integración de los módulos.
 - `test_transformaciones.py`: pruebas para verificar los resultados de las funciones de análisis.
 - `Coffe_sales.csv`: base de datos utilizada por el sistema.
+- `EMPRENDIMIENTO.md`: propuesta de emprendimiento y posible comercialización del sistema.
 
 ## 🚀 INSTALACIÓN Y EJECUCIÓN
 
-Para ejecutar el proyecto es necesario tener instalado Python 3 y un editor de código como Visual Studio Code.
+Para ejecutar el proyecto es necesario tener instalado Python 3 y se recomienda utilizar un editor de código como Visual Studio Code.
 
 No se requiere instalar bibliotecas externas, ya que el programa utiliza herramientas incluidas en Python.
 
@@ -205,27 +207,26 @@ Durante el desarrollo se aplicaron los siguientes conceptos:
 
 La lectura del archivo y las operaciones de entrada y salida se mantienen separadas de las funciones puras de análisis.
 
-## 📈 MEJORAS PENDIENTES
+## 💼 PROPUESTA DE EMPRENDIMIENTO
 
-Para continuar con el desarrollo se tiene previsto:
+Como parte del proyecto se elaboró una propuesta de emprendimiento enfocada en ofrecer el sistema como una herramienta de análisis de ventas para pequeñas cafeterías, negocios independientes y establecimientos que almacenen sus registros en archivos CSV.
 
-- Agregar una función que identifique automáticamente la hora con mayor cantidad de ventas.
-- Mostrar la hora pico y el café más vendido dentro del resumen general.
-- Complementar las pruebas de los módulos.
-- Revisar la organización de los archivos innecesarios del repositorio.
+La propuesta contempla un servicio de instalación y configuración, así como posibles adaptaciones a las necesidades de otros negocios.
 
-Estas mejoras se implementarán manteniendo el código sencillo y respetando los principios de programación funcional.
+El documento completo se encuentra en:
 
-📚 FUENTE DE DATOS
+[Consultar propuesta de emprendimiento](docs/EMPRENDIMIENTO.md)
 
-Nombre: Coffee Sales Dataset
+## 📚 FUENTE DE DATOS
 
-Autor del notebook: Mahmoud Gamil
+**Nombre:** Coffee Sales Dataset
 
-Plataforma: Kaggle
+**Autor del notebook:** Mahmoud Gamil
 
-Archivo utilizado: Coffe_sales.csv
+**Plataforma:** Kaggle
 
-Enlace: https://www.kaggle.com/code/mahmoudredagamail/coffee-sales-dataset/input
+**Archivo utilizado:** `Coffe_sales.csv`
 
-El conjunto de datos contiene información sobre transacciones de ventas de café y fue utilizado con fines académicos y educativos, para desarrollar, probar y comprobar el funcionamiento del sistema mediante los principios de la programación funcional.
+**Enlace:** https://www.kaggle.com/code/mahmoudredagamail/coffee-sales-dataset/input
+
+El conjunto de datos contiene información sobre transacciones de ventas de café y fue utilizado con **fines académicos y educativos**, para desarrollar, probar y comprobar el funcionamiento del sistema mediante los principios de la programación funcional.
