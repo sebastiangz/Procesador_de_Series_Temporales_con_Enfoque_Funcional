@@ -127,7 +127,8 @@ Sistema_Analisis_Ventas_Cafe/
 │   └── test_transformaciones.py
 │
 └── docs/
-    └── EMPRENDIMIENTO.md
+    ├── EMPRENDIMIENTO.md
+    └── GUIA_EJECUCION.md
 ```
 
 **Descripción de los archivos principales:**
@@ -138,61 +139,26 @@ Sistema_Analisis_Ventas_Cafe/
 - `test_transformaciones.py`: pruebas para verificar los resultados de las funciones de análisis.
 - `Coffe_sales.csv`: base de datos utilizada por el sistema.
 - `EMPRENDIMIENTO.md`: propuesta de emprendimiento y posible comercialización del sistema.
+- `GUIA_EJECUCION.md`: instrucciones para ejecutar el programa, utilizar sus funciones y realizar las pruebas automáticas.
 
 ## 🚀 INSTALACIÓN Y EJECUCIÓN
 
-Para ejecutar el proyecto es necesario tener instalado Python 3 y se recomienda utilizar un editor de código como Visual Studio Code.
+Para consultar las instrucciones completas de instalación, ejecución y uso del sistema:
 
-No se requiere instalar bibliotecas externas, ya que el programa utiliza herramientas incluidas en Python.
-
-**Pasos para ejecutar el sistema:**
-
-1. Descargar el proyecto desde GitHub.
-2. Abrir la carpeta `Sistema_Analisis_Ventas_Cafe` en Visual Studio Code.
-3. Abrir una terminal dentro de esa carpeta.
-4. Ejecutar el siguiente comando:
-
-```powershell
-py src/main.py
-```
-
-Al ejecutarlo aparecerá el menú principal, donde el usuario podrá seleccionar las diferentes opciones de análisis.
-
-En sistemas donde no esté disponible el comando `py`, se puede utilizar:
-
-```bash
-python src/main.py
-```
+[Consultar guía de ejecución](docs/GUIA_EJECUCION.md)
 
 ## 🧪 PRUEBAS REALIZADAS
 
-El funcionamiento del sistema fue comprobado en Visual Studio Code utilizando el archivo CSV original.
+El funcionamiento del sistema fue comprobado en Visual Studio Code utilizando los 3,547 registros del Coffee Sales Dataset.
 
-Entre los resultados obtenidos se encuentran:
+Entre los resultados obtenidos destacan:
 
-- **Total de ventas:** 3,547 registros.
 - **Ingresos totales:** 112,245.58 unidades monetarias.
 - **Tipos de café identificados:** 8.
 - **Café más vendido:** Americano with Milk, con 809 ventas.
-- **Ventas del 1 de marzo de 2024:** 11 registros.
+- **Pruebas automáticas:** 4 pruebas ejecutadas y aprobadas correctamente.
 
 También se realizaron pruebas con fechas incorrectas, horas fuera de rango y opciones inexistentes del menú.
-
-### Pruebas automáticas
-
-Se utiliza la biblioteca `unittest` para comprobar las cuatro funciones principales de `transformaciones.py`.
-
-Para ejecutar las pruebas desde la carpeta principal del proyecto:
-
-```powershell
-py -m unittest discover -s tests -v
-```
-
-**Resultado obtenido:**
-
-- 4 pruebas ejecutadas.
-- 4 pruebas aprobadas.
-- 0 errores.
 
 ## 🔧 PROGRAMACIÓN FUNCIONAL UTILIZADA
 
