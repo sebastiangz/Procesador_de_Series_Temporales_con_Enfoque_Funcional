@@ -126,9 +126,10 @@ Sistema_Analisis_Ventas_Cafe/
 ├── tests/
 │   └── test_transformaciones.py
 │
-└── docs/
+└──docs/
     ├── EMPRENDIMIENTO.md
-    └── GUIA_EJECUCION.md
+    ├── GUIA_EJECUCION.md
+    └── VIDEO.md
 ```
 
 **Descripción de los archivos principales:**
@@ -140,6 +141,7 @@ Sistema_Analisis_Ventas_Cafe/
 - `Coffe_sales.csv`: base de datos utilizada por el sistema.
 - `EMPRENDIMIENTO.md`: propuesta de emprendimiento y posible comercialización del sistema.
 - `GUIA_EJECUCION.md`: instrucciones para ejecutar el programa, utilizar sus funciones y realizar las pruebas automáticas.
+- `VIDEO.md`: contiene el enlace al video de presentación, donde se muestra el funcionamiento del sistema y su propuesta de emprendimiento.
 
 ## 🚀 INSTALACIÓN Y EJECUCIÓN
 
@@ -194,5 +196,8 @@ El documento completo se encuentra en:
 **Archivo utilizado:** `Coffe_sales.csv`
 
 **Enlace:** https://www.kaggle.com/code/mahmoudredagamail/coffee-sales-dataset/input
+
+En este video mostramos el funcionamiento del sistema y explicamos su propuesta de emprendimiento.
+[Ver video de presentación](docs/VIDEO.md)
 
 El conjunto de datos contiene información sobre transacciones de ventas de café y fue utilizado con **fines académicos y educativos**, para desarrollar, probar y comprobar el funcionamiento del sistema mediante los principios de la programación funcional.
